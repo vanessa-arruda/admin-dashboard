@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+/* Layout Grid Container */
+.container{
+    display:grid;
+    resize:both;
+    overflow: auto;
+    grid-template-rows: repeat(5, 150px);
+    grid-template-columns: repeat(5, 1fr);
+    background-color: #dedede;
+}
+/* header components */
+header {
+    /* border: 1px solid blue; */
+    /* grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+    grid-area: 1 / 2 / 1 / 6;
+    background-color: #fff;
+    box-shadow: 2px 4px 4px #a7a7a7;   
+}
+
+.header-search{
+    margin: 12px;
+}
+
+#search-input-container input{
+    border: 1px solid #d4d4d4;
+    border-radius: 12px;
+    background-color: #d4d4d4;
+    min-width: 50%;
+    height: 20px;
+}
+
+/* nav components */
+nav {
+    /* border: 1px solid green; */
+    grid-area: 1 / 1 / 6 / 2;
+    background-color: #0097ce;
+    color: #fff;
+}
+
+nav span{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 4px;
+    padding: 12px;
+    width: 100%;
+}
+
+nav h1{
+    font-weight: 700;
+    color: #fff;
+}
+
+.menu-container {
+    width: 100%;
+}
+.menu-container ul li{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* main session components */
+main {
+    /* border: 1px solid red; */
+    grid-area: 2 / 2 / 6 / 5;
+}
+/* side section components */
+section{
+    border: 1px solid purple;
+    grid-area: 2 / 5 / 6 / 6;
+}
