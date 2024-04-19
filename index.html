@@ -6,56 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="./dashboard-favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/dashboard-favicon.png" type="image/x-icon">
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="header-search">
-                <img src="magnifyer" alt="">
-                <span id="search-input-container">
+            <section class="header-search">
+                <div id="search-input-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                     <label for="search"></label>
                     <input type="text" name="search" id="search">
-                </span>
-            </div>
+                </div>
+                <div id='profile-info'>
+                    <i class="fa-regular fa-bell"></i>
+                    <img src="./assets/persona1.png" alt="user profile photo" width='60px' height='auto'>
+                    <p>Morgan Oakley</p>
+                </div>
+            </section>
+            <section class='submenu'>
+                <div class='submenu-profile'>
+                    <img src="./assets/persona1.png" alt="user profile photo" width='80px' height='auto'>
+                    <div class='welcoming-text-container'>
+                        <p id='hi-text'>Hi there,</p>
+                        <p id='user-name'>Morgan Oakley (@morgan)</p>
+                    </div>
+                </div>
+                <div class='submenu-buttons'>
+                    <a href="#">New</a>
+                    <a href="#">Upload</a>
+                    <a href="#">Share</a>
+                </div>
+            </section>
         </header>
         <nav>
             <span>
-                <img src="./icons-dashboard-32.png" alt="dashboard logo" width="40px" height="40px">
+                <img src="./assets/icons-dashboard-32.png" alt="dashboard logo" width="32px" height="32px">
                 <h1>Dashboard</h1>
             </span>
             <div class="menu-container">
                 <ul>
                     <li>
-                        <img src="" alt="">
+                        <i class="fa-solid fa-house" style="color: #ffffff;"></i>
                         <p>Home</p>
                     </li>
                     <li>
-                        <img src="" alt="">
+                        <i class="fa-solid fa-user" style="color: #ffffff;"></i>
                         <p>Profile</p>
                     </li>
                     <li>
+                        <i class="fa-solid fa-message" style="color: #ffffff;"></i>
                         <p>Messages</p>
                     </li>
                     <li>
+                        <i class="fa-solid fa-clock" style="color: #ffffff;"></i>
                         <p>History</p>
                     </li>
                     <li>
+                        <i class="fa-solid fa-list-check" style="color: #ffffff;"></i>
                         <p>Tasks</p>
                     </li>
                     <li>
+                        <i class="fa-solid fa-users" style="color: #ffffff;"></i>
                         <p>Communities</p>
                     </li>
                 </ul>
                 <br>
                 <ul>
                     <li>
+                        <i class="fa-solid fa-gear" style="color: #ffffff;"></i>
                         <p>Settings</p>
                     </li>
                     <li>
+                        <i class="fa-solid fa-circle-question" style="color: #ffffff;"></i>
                         <p>Support</p>
                     </li>
                     <li>
+                        <i class="fa-solid fa-shield-halved" style="color: #ffffff;"></i>
                         <p>Privacy</p>
                     </li>
                 </ul>
@@ -63,19 +89,115 @@
         </nav>
         <main>
             <h2>Your Projects</h2>
-            <div>Super Cool Project</div>
-            <div>Less Cool Project</div>
-            <div>Impossible App</div>
-            <div>Easy Peasy App</div>
-            <div>Ad Blocker</div>
-            <div>Money Maker</div>
+            <div class='projects-container'>
+                <div class='project-container'>
+                    <h3>Super Cool Project</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam corrupti debitis unde porro repellat eaque, omnis ad. Iure, quam voluptatum.</p>
+                    <div class='project-actions'>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+                <div class='project-container'>
+                    <h3>Less Cool Project</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur. Uitis unde porro repellat eaque, omnis ad. Iure, quam voluptatum.</p>
+                    <div class='project-actions'>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+                <div class='project-container'>
+                    <h3>Impossible App</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur. Uitis unde porro repellat eaque, omnis ad. Iure, quam voluptatum.</p>
+                    <div class='project-actions'>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+                <div class='project-container'>
+                    <h3>Easy Peasy App</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur. Uitis unde porro repellat eaque, omnis ad. Iure, quam voluptatum.</p>
+                    <div class='project-actions'>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+                <div class='project-container'>
+                    <h3>Ad Blocker</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur. Uitis unde porro repellat eaque, omnis ad. Iure, quam voluptatum.</p>
+                    <div class='project-actions'>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+                <div class='project-container'>
+                    <h3>Money Maker</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur. Uitis unde porro repellat eaque, omnis ad. Iure, quam voluptatum.</p>
+                    <div class='project-actions'>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+            </div>
         </main>
-        <section>
+        <section id='right-announcement-container'>
             <h2>Announcements</h2>
-            <div></div>
+            <section id='announcements-container'>
+                <div class='announce-container'>
+                    <h4>Site Maintenance</h4>
+                    <p>Lorem adipisicing elit. Consequuntur excepturi voluptatibus corrupti laboriosam ullam, amet iusto. Sapiente ullam, autem id perferendis esse optio dolorem cum.</p>
+                    <hr>
+                </div>
+                <div class='announce-container'>
+                    <h4>Community Share Day</h4>
+                    <p>Lorem ipisicing elit. Consequuntur excepturi voluptatibus corrupti laboriosam ullam, amet iusto. Sapiente ullam, autem id perferendis esse optio dolorem cum.</p>
+                    <hr>
+                </div>
+                <div class='announce-container'>
+                    <h4>Updated Privacy Policy</h4>
+                    <p>Lorem ur adipisicing elit. Consequuntur excepturi voluptatibus corrupti laboriosam ullam, amet iusto. Sapiente ullam, autem id perferendis esse optio dolorem cum.</p>
+                </div>
+            </section>
             <h2>Trending</h2>
-            <div></div>
+            <section class='trending-container'>
+                <div>
+                    <img src="./assets/persona1.png" alt="" width='40px' height='auto'>
+                    <div class='trend-profile-text'>
+                        <h4>@tegan</h4>
+                        <p>World Peace Builder</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="./assets/persona2.png" alt="" width='40px' height='auto'>
+                    <div class='trend-profile-text'>
+                        <h4>@morgan</h4>
+                        <p>Super Cool Project</p>
+                    </div>
+                    
+                </div>
+                <div >
+                    <img src="./assets/persona3.png" alt="" width='40px' height='auto'>
+                    <div class='trend-profile-text'>
+                        <h4>@kendall</h4>
+                        <p>Life Changing App</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="./assets/persona4.png" alt="" width='40px' height='auto'>
+                    <div class='trend-profile-text'>
+                        <h4>alex</h4>
+                        <p>No Traffic Maker</p>
+                    </div>
+                </div>
+            </section>
         </section>
     </div>
+    <script src="https://kit.fontawesome.com/6d2e4847db.js" crossorigin="anonymous"></script>
 </body>
 </html>

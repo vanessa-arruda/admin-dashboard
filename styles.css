@@ -3,15 +3,18 @@
 body{
     margin: 0;
     font-family: "Roboto", sans-serif;
+    height: 100vh;
 }
 /* Layout Grid Container */
 .container{
     display:grid;
     resize:both;
     overflow: auto;
-    grid-template-rows: repeat(5, 150px);
+    grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(5, 1fr);
-    background-color: #dedede;
+    background-color: #E2E8F0;
+    width: 100vw; 
+    height: 100vh;
 }
 /* header components */
 header {
@@ -22,33 +25,96 @@ header {
     box-shadow: 2px 4px 4px #a7a7a7;   
 }
 
+img{
+    border-radius: 50%;
+}
+
 .header-search{
-    margin: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 24px;
+}
+
+#search-input-container{
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 #search-input-container input{
-    border: 1px solid #d4d4d4;
+    border: 1px solid #E2E8F0;
     border-radius: 12px;
-    background-color: #d4d4d4;
-    min-width: 50%;
+    background-color: #E2E8F0;
+    width: 500px;
     height: 20px;
+}
+
+#profile-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 18%;
+    font-weight: 700;
+}
+
+.submenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 24px;
+}
+
+.submenu-profile{
+    display: flex;
+    gap: 8px;
+    font-weight: 700;
+}
+
+.welcoming-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hi-text{
+    font-size: smaller;
+}
+
+#user-name{
+    font-size: 20px;
+}
+
+.submenu-buttons{
+    display: flex;
+    gap: 12px;
+}
+.submenu-buttons a{
+    padding: 8px;
+    color: #fff;
+    background-color: #1992d4;
+    width: 70px;
+    border-radius: 20px;
+    border-color: #1992d4;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
 }
 
 /* nav components */
 nav {
     /* border: 1px solid green; */
     grid-area: 1 / 1 / 6 / 2;
-    background-color: #0097ce;
+    background-color: #1992d4;
     color: #fff;
 }
 
 nav span{
     display: flex;
-    justify-content: start;
+    justify-content: left;
     align-items: center;
-    gap: 4px;
-    padding: 12px;
-    width: 100%;
+    gap: 24px;
+    margin-left: 28px;
 }
 
 nav h1{
@@ -56,8 +122,19 @@ nav h1{
     color: #fff;
 }
 
+li {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 12px;
+    padding: 12px;
+}
+
 .menu-container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px
 }
 .menu-container ul li{
     text-decoration: none;
@@ -65,12 +142,104 @@ nav h1{
 }
 
 /* main session components */
-main {
+main{
     /* border: 1px solid red; */
     grid-area: 2 / 2 / 6 / 5;
 }
+
+main h2{
+    margin: 16px;
+}
+
+.projects-container{
+    display:grid;
+    resize:both;
+    overflow: auto;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 16px;
+}
+
+.project-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border-left: 5px solid orange;
+    border-radius: 4px;
+    padding: 12px;
+    /* grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+}
+.project-container p{
+    color: #555555;
+    margin: 0;
+}
+
+.project-actions{
+    text-align:right;
+    
+}
+
 /* side section components */
-section{
-    border: 1px solid purple;
+#right-announcement-container{
+    /* border: 1px solid purple; */
     grid-area: 2 / 5 / 6 / 6;
+    
+}
+#announcements-container{
+    border-radius: 6px;
+    margin-right: 18px;
+    background-color: #fff;
+    font-size: 12px;
+}
+
+#right-announcement-container h2{
+    margin-bottom: 12px;
+}
+
+.announce-container{
+    margin: 0px;
+    width: 95%;
+    padding: 4px;
+}
+
+.announce-container p{
+    color: #555555;
+    padding-bottom: 8px;
+}
+
+.announce-container h4,
+hr, p,
+.trend-profile-text h4{
+    margin: 0;
+    padding: 0;
+}
+
+.trending-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    margin: 0px;
+    padding: 4px;
+    border-radius:  6px;
+    margin-right: 18px;
+    background-color: #fff;
+    font-size: 12px;
+}
+
+.trending-container div {
+    display: flex;
+}
+
+.trend-profile-text{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+}
+
+.trend-profile-text p {
+    font-weight: 700;
 }
